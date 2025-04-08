@@ -107,6 +107,7 @@ body {
 .hero-content {
     max-width: 800px;
     padding-top: 4rem;
+    text-align: left;
 }
 
 .hero-logo {
@@ -429,12 +430,25 @@ h1::before {
         background-attachment: scroll;
         height: 100svh;
         align-items: flex-start;
+        justify-content: center;
     }
 
     .hero-content {
-        padding-top: 6rem;
+        padding-top: 8rem;
         text-align: center;
         width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .content-section {
+        padding-top: 6rem;
+        gap: 3rem;
+    }
+
+    .content-section:first-child {
+        padding-top: 8rem;
     }
 
     .hero-title {
@@ -446,6 +460,7 @@ h1::before {
     .hero-subtitle {
         font-size: 1.2rem;
         padding: 0 1rem;
+        max-width: 500px;
     }
 
     .nav-menu {
@@ -488,7 +503,16 @@ h1::before {
     }
 
     .hero-content {
+        padding-top: 7rem;
+    }
+
+    .content-section {
         padding-top: 5rem;
+        gap: 2rem;
+    }
+
+    .content-section:first-child {
+        padding-top: 7rem;
     }
 
     .hero-title {
