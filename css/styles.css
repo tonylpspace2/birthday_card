@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+    color: #ffd700;
+}
+
+.buy-now-btn {
+    background: #ffffff;
+    color: #000000;
+    padding: 0.45rem 1rem;
+    border: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.buy-now-btn:hover {
+    background: #ffd700;
+}
+
+.hero-banner {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('../images/happy_banner.jpg');
+    background-size: cover;
+    background-position: center 30%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    padding: 8rem 4rem 0;
+    overflow: hidden;
+}
+
+/* Specific style for overview page */
+.overview-page .hero-banner {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url('../images/stoic.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding-top: 4rem;
+}
+
+.hero-logo {
+    width: 200px;
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    font-size: 4rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    color: #ffffff;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.hero-btn {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border: 1px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.hero-btn:hover {
+    background: #ffffff;
+    color: #000000;
+}
+
+.hero-btn.primary {
+    background: #ffffff;
+    color: #000000;
+}
+
+.hero-btn.primary:hover {
+    background: #ffd700;
+    border-color: #ffd700;
+}
+
+.main-content {
+    background: #000000;
+    position: relative;
+    z-index: 1;
+}
+
+.content-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    padding: 4rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    align-items: center;
+}
+
+.content-section.reverse {
+    direction: rtl;
+}
+
+.content-section.reverse > * {
+    direction: ltr;
+}
+
+.content-section + .content-section {
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 2rem;
+    padding-top: 4rem;
+}
+
+.content-image {
+    width: 100%;
+    height: auto;
+    max-width: 600px;
+}
+
+.content-text {
+    color: #ffffff;
+}
+
+.content-logo {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.content-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+}
+
+.content-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    color: #cccccc;
+}
+
+.content-info {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #999999;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width: 1024px) {
+    .content-section,
+    .content-section.reverse {
+        grid-template-columns: 1fr;
+        padding: 2rem;
+        gap: 2rem;
+        direction: ltr;
+    }
+
+    .content-section + .content-section {
+        margin-top: 1rem;
+        padding-top: 2rem;
+    }
+
+    .content-title {
+        font-size: 2.5rem;
+    }
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url('https://www.rockstargames.com/newswire/img/global/backgrounds/rockstar-games-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.container {
+    max-width: 90vw;
+    width: 800px;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.85);
+    border: 1px solid #ffd700;
+    text-align: center;
+    margin: 20px;
+    position: relative;
+}
+
+.container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #ffd700, transparent);
+}
+
+h1 {
+    color: #ffd700;
+    font-size: min(15vw, 5rem);
+    margin-bottom: 1rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-family: 'Arial', sans-serif;
+    letter-spacing: 0.1em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    display: inline-block;
+    padding: 0 0.5em;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+h1::before {
+    content: "HAPPY BIRTHDAY";
+    position: absolute;
+    left: 0.5em;
+    top: 2px;
+    color: #000000;
+    z-index: -1;
+    width: 100%;
+}
+
+.quote-section {
+    margin: 2rem 0;
+    padding: 1rem;
+    border-left: 4px solid #ffd700;
+    background: rgba(255, 215, 0, 0.1);
+}
+
+.joke-section {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #ffd700;
+}
+
+.gta-element {
+    margin: 2rem 0;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid #ffd700;
+}
+
+.wanted-poster {
+    width: 200px;
+    height: 200px;
+    background: #000;
+    border: 3px solid #ffd700;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffd700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
+    overflow: hidden;
+}
+
+.wanted-poster::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        45deg,
+        transparent,
+        transparent 10px,
+        rgba(255, 215, 0, 0.1) 10px,
+        rgba(255, 215, 0, 0.1) 20px
+    );
+}
+
+.joker-quote {
+    font-style: italic;
+    color: #ffd700;
+    margin: 1rem 0;
+    border: 1px solid #ffd700;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.stoic-quote {
+    font-style: italic;
+    color: #ffffff;
+    margin: 1rem 0;
+}
+
+.bad-joke {
+    color: #ffd700;
+    margin: 1rem 0;
+}
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: #ffd700;
+    border-radius: 50%;
+    animation: fall 3s linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(-100px) rotate(0deg); }
+    100% { transform: translateY(100vh) rotate(360deg); }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 1rem;
+        margin: 10px;
+    }
+
+    .quote-section,
+    .joke-section,
+    .gta-element {
+        margin: 1rem 0;
+        padding: 0.8rem;
+    }
+
+    .wanted-poster {
+        width: 150px;
+        height: 150px;
+        font-size: 1.5rem;
+    }
+
+    .hero-banner {
+        background-position: center center;
+    }
+
+    .nav-menu {
+        gap: 1.5rem;
+    }
+    
+    .nav-right {
+        margin-left: 2rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    h1::before {
+        left: 0.5em;
+        top: 1px;
+    }
+
+    .wanted-poster {
+        width: 120px;
+        height: 120px;
+        font-size: 1.2rem;
+    }
+
+    .stoic-quote,
+    .joker-quote,
+    .bad-joke {
+        font-size: 0.9rem;
+    }
+
+    .nav-menu {
+        gap: 1rem;
+    }
+    
+    .nav-right {
+        margin-left: 1.5rem;
+    }
+}
+
+/* Specific styles for overview page */
+.overview-page {
+    font-family: 'Cinzel', serif;
+}
+
+.overview-page .hero-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 900;
+    letter-spacing: 0.15em;
+}
+
+.overview-page .hero-subtitle {
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    letter-spacing: 0.1em;
+}
+
+.overview-page .content-title {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.overview-page .content-description {
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: 0.05em;
+}
+
+.overview-page .content-info {
+    font-family: 'Cinzel', serif;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+}
+
+.overview-page .nav-menu a {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+
+.overview-page .buy-now-btn,
+.overview-page .hero-btn {
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
