@@ -31,6 +31,7 @@ body {
     display: flex;
     align-items: center;
     gap: 2rem;
+    flex: 1;
 }
 
 .nav-right {
@@ -43,6 +44,9 @@ body {
     display: flex;
     gap: 2rem;
     list-style: none;
+    justify-content: center;
+    flex: 1;
+    margin-right: 2rem;
 }
 
 .nav-menu a {
@@ -465,12 +469,27 @@ h1::before {
     font-family: 'Cinzel', serif;
     font-weight: 900;
     letter-spacing: 0.15em;
+    text-shadow: 
+        2px 2px 0 rgba(0, 0, 0, 0.8),
+        -2px -2px 0 rgba(0, 0, 0, 0.8),
+        2px -2px 0 rgba(0, 0, 0, 0.8),
+        -2px 2px 0 rgba(0, 0, 0, 0.8),
+        0 0 20px rgba(0, 0, 0, 0.9);
+    color: #ffffff;
 }
 
 .overview-page .hero-subtitle {
     font-family: 'Cinzel', serif;
     font-weight: 400;
     letter-spacing: 0.1em;
+    text-shadow: 
+        1px 1px 0 rgba(0, 0, 0, 0.8),
+        -1px -1px 0 rgba(0, 0, 0, 0.8),
+        1px -1px 0 rgba(0, 0, 0, 0.8),
+        -1px 1px 0 rgba(0, 0, 0, 0.8),
+        0 0 10px rgba(0, 0, 0, 0.9);
+    color: #ffffff;
+    font-size: 1.8rem;
 }
 
 .overview-page .content-title {
